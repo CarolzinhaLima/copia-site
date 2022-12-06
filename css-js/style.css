@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --azul-escuro: #27408B;
+    --azul-claro: #4876FF;
+    --cinza-azulado: #36648B;
+    --cinza-azulado-claro: #eef4fd;
+    --cinza-azulado-escuro: #c7cacf;
+    --cinza-texto: #444444;
+    --cinza-texto-escuro: #333;
+    --roxo-destaque: #A020F0;
+}
+
+body{
+    background: white;
+}
+header nav{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+   
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    padding: 0 1% 0 2%;
+}
+header nav ul li{
+    margin: 0 ;
+
+    padding: 15px 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav ul li:hover{
+    border-radius: 20px;
+    background: var(--rosa);
+}
+header nav ul li a{
+    color: var(--azul-claro);
+    text-decoration: none;
+    transition: 0.5s;
+    font-size: 1.2rem;
+}
+.menu-icon{
+    display: none;
+    cursor: pointer;
+}
+.menu-icon img{
+    filter: invert(1);
+}
+h1{
+    padding: 1% 0;
+    align-items: center;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* titulo */
+.titulo{
+    text-align: center;
+
+}
+.titulo img{
+width: 100%;
+}
+
+.card{
+    display:inline-block;
+    margin: 3% 20px;
+    box-shadow: 0 4px 12px rgb(151, 151, 151);
+    border-radius: 10px;
+    background-color: var(--cinza-azulado-claro);
+    width: 350px;
+    font-family: Arial;
+    font-size: 1.2rem;
+}
+.top{
+    padding: 2% 0;
+    text-align: center;
+}
+.meio{
+    padding: 0px 25px 7px;
+}
+.baixo{
+    padding: 2% 2%;
+}
+.card h3{
+    display: block;
+}
+
+.topico h2{
+    color: var(--azul-escuro);
+    font-size: 2.5rem;
+    margin: 2.5% 0 1% 1%;
+}
+.topico #texto h3{
+    color: var(--cinza-azulado);
+    font-size: 1.8rem;
+    margin: 1% 0 0% 1%;
+}
+.link{
+    margin:  1% 0 0% 1%;
+    font-size: 1.3rem;
+}
+#logobaixo{
+   margin:  5% 5% 5% 5%;
+}
+.contato .menubaixo ul li a{
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+footer{
+    background-color: var(--azul-escuro);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 1.5;
+}
+footer ul{
+    list-style-type: none;
+}
+footer ul li{
+    color: white;
+    padding: 10% 0;
+    font-size: 1.3rem;
+}
+footer .logo{
+    margin: 4% 10%;
+}
+footer p{
+    color: var(--cinza-azulado-claro);
+    font-size: 1rem;
+    text-align: center;
+    padding: 8px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+footer img{
+    background-color: var(--azul-escuro);
+    align-items: center;
+    line-height: 1.5;
+}
+.final{
+    color: white;
+    display: flex;
+    padding: 1% 20%;
+    justify-content: space-between;
+    background-color: var(--azul-claro);
+}
+
+
+@media (max-width: 720px){
+    /* Menu */
+    .logo a img{
+        width: 15%;
+        height: 40px;
+    }
+    header .menu-icon{
+        display: block;
+        z-index: 1;
+        cursor: pointer;
+    }
+    header nav ul{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 40%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 0.6s ease-in;
+        background-color: var(--footer);
+        
+    }
+    header nav ul.open{
+        transform: translateX(0);
+    }
+    header nav ul li{
+        margin: 10px;
+    }
+    header nav ul li a{
+        font-size: 1.5rem;
+        text-decoration: none;
+    }
+
+    /* Main */
+    .titulo {
+        padding: 0;
+        text-align: center;
+    }
+    .titulo h1{
+        padding: 25% 0 0 1%;
+        font-size: 2.5rem;
+    }
+    .titulo img{
+        width: 100%;
+        height: 300px;
+    }
+    .topico .card{
+        margin: 2% 0 2%;
+
+    }
+    
+    /* Topicos */
+
+    #sobre p{
+        font-size: 1.1rem;
+    }
+    .topico{
+
+        margin: 5% 3%;
+        text-align: center;
+        border-radius: 20px;
+        padding: 3% 0;  
+    }
+    .topico h2{
+        color: black;
+        padding: 1% 0;
+    }
+    h2{
+        font-size: 1.8rem;
+    }
+    .topico p{
+        margin: 0% 5%;
+        padding: 2% 0%;
+    }
+    .topico img{
+        margin: 1% 0;
+        width: 80%;
+    }   
+
+    /* Footer */
+    footer{
+        background-color: var(--footer);
+        text-align: center;
+    }
+    footer p{
+        font-size: 1rem;
+        padding: 3% 0;
+    }
+    #redes img{
+        width: 6%;
+        margin: 2% 1% 2%;
+    }
+    #face img
+    {
+        width:4% ;
+    }
+    #local img{
+        width: 5%;
+    }
+
+
+}
